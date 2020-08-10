@@ -6,10 +6,12 @@
   "author": "张文旗 <1071942338@qq.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config ./config/webpack.config.js"
+    "dev": "webpack --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js"
   },
   "devDependencies": {
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.1"
   }
 }
