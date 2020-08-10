@@ -1,0 +1,8 @@
+{
+  "name": "my-webpack-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/1071942338/my-webpack-config.git",
+  "author": "张文旗 <1071942338@qq.com>",
+  "license": "MIT"
+}
