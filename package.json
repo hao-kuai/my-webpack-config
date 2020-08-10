@@ -6,8 +6,8 @@
   "author": "张文旗 <1071942338@qq.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --config ./config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.prod.js"
+    "dev": "node ./scripts/dev.js",
+    "build": "node ./scripts/build.js"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -21,6 +21,7 @@
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.1"
   },
   "dependencies": {
