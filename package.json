@@ -5,6 +5,9 @@
   "repository": "https://github.com/1071942338/my-webpack-config.git",
   "author": "张文旗 <1071942338@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.js"
+  },
   "devDependencies": {
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
