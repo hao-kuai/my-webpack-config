@@ -10,7 +10,9 @@
     "build": "webpack --config ./config/webpack.prod.js"
   },
   "devDependencies": {
+    "css-loader": "^4.2.1",
     "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^5.1.1"
