@@ -7,6 +7,11 @@ colorElement.setAttribute("class", "color");
 colorElement.innerText = "my-webpack-config";
 document.body.appendChild(colorElement);
 
+const fontElement = document.createElement("div");
+fontElement.setAttribute("class", "color font");
+fontElement.innerText = "my-webpack-config";
+document.body.appendChild(fontElement);
+
 const smallImageElement = document.createElement("img");
 smallImageElement.setAttribute("src", smallImage);
 document.body.appendChild(smallImageElement);
