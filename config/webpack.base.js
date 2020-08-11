@@ -5,8 +5,7 @@ module.exports = {
   //指定入口文件
   entry: pathsUtil.appIndexJs,
   output: {
-    //输入文件夹名称
-    filename: "main.js",
+    filename: "static/js/[name].[contenthash:8].js",
   },
   module: {
     rules: [
