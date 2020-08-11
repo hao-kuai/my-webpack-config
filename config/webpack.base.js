@@ -31,13 +31,21 @@ module.exports = {
             loader: "url-loader",
             options: {
               limit: 51200, //50k
+              name: "static/media/[name].[hash:8].[ext]",
             },
           },
         ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "static/media/[name].[hash:8].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
