@@ -6,7 +6,7 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="color">my-webpack-config</div>
-        <div className="color font">my-webpack-config1</div>
+        <div className="color font">my-webpack-config</div>
         <img src={smallImage} alt=""></img>
         <img src={bigImage} alt=""></img>
       </div>
