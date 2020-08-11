@@ -28,6 +28,13 @@ module.exports = {
             options: { publicPath: "../../" },
           },
           "css-loader",
+          // Use it after css-loader and style-loader, but before other preprocessor loaders like e.g sass|less|stylus-loader, if you use any.
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [require("autoprefixer")],
+            },
+          },
         ],
       },
       {
