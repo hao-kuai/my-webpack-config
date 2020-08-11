@@ -3,7 +3,7 @@ import smallImage from "./image/small.png";
 import bigImage from "./image/big.png";
 export default class App extends React.Component {
   componentDidMount() {
-    console1.log("my-webpack-config");
+    // console1.log("my-webpack-config");
   }
   render() {
     return (
