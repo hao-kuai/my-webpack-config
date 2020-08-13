@@ -23,5 +23,8 @@ module.exports = smp.wrap(
       //   },
       // }),
     ],
+    optimization: {
+      runtimeChunk: "single",
+    },
   })
 );
