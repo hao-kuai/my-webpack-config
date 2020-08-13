@@ -4,7 +4,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   //指定入口文件
-  entry: pathsUtil.appIndexJs,
+  entry: {
+    index: pathsUtil.appIndexJs,
+    index2: pathsUtil.appIndex2Js,
+  },
   output: {
     filename: "static/js/[name].[contenthash:8].js",
   },
