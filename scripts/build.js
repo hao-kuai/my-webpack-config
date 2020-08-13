@@ -8,5 +8,11 @@ webpack(prodConfig, (err, stats) => {
     console.log("stats:", stats);
   }
   // 处理完成
-  console.log("处理完成");
+  const assetsInfo = stats.toJson({ all: false, assets: true }).assets;
+  console.log("构建完成 >>>>>>>>>>>>>");
+  assetsInfo.forEach((element) => {
+    const size = (element.size / 1024.0).toFixed(2);
+    console.log(`${element.name} ${size}K`);
+  });
+  console.log("构建完成 <<<<<<<<<<<<<");
 });
