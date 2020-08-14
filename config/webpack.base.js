@@ -1,6 +1,7 @@
 const pathsUtil = require("./pathsUtil");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const getCssModuleName = require("./getCssModuleName");
 
 module.exports = {
   //指定入口文件
@@ -31,7 +32,16 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: { publicPath: "../../" },
           },
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: {
+                getLocalIdent: getCssModuleName,
+                // localIdentName: "[name]__[local]_[hash:base64:5]",
+              },
+            },
+          },
           // Use it after css-loader and style-loader, but before other preprocessor loaders like e.g sass|less|stylus-loader, if you use any.
           {
             loader: "postcss-loader",

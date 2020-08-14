@@ -1,12 +1,4 @@
-.color {
-  color: rebeccapurple;
-  display: flex;
-  box-sizing: border-box;
-}
 @font-face {
   font-family: myFirstFont;
   src: url("./font/font.ttf");
-}
-.font {
-  font-family: myFirstFont;
 }

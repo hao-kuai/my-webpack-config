@@ -1,0 +1,14 @@
+.color {
+  color: rebeccapurple;
+  display: flex;
+  box-sizing: border-box;
+}
+.color2 {
+  color: red;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.font {
+  font-family: myFirstFont;
+}
