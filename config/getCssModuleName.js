@@ -3,7 +3,7 @@
 const loaderUtils = require("loader-utils");
 const path = require("path");
 
-module.exports = function getLocalIdent(
+module.exports = function getCssModuleName(
   context,
   localIdentName,
   localName,
