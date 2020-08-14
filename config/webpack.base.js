@@ -15,7 +15,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|mjs|jsx|ts|tsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        include: pathsUtil.appSrc,
         use: {
           loader: "babel-loader",
           options: {
@@ -25,6 +25,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        include: pathsUtil.appSrc,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -42,23 +43,25 @@ module.exports = {
       },
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        include: pathsUtil.appSrc,
         use: [
           {
             loader: "url-loader",
             options: {
               limit: 51200, //50k
-              name: "static/media/[name].[hash:8].[ext]",
+              name: "static/media/[name].[contenthash:8].[ext]",
             },
           },
         ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
+        include: pathsUtil.appSrc,
         use: [
           {
             loader: "file-loader",
             options: {
-              name: "static/media/[name].[hash:8].[ext]",
+              name: "static/media/[name].[contenthash:8].[ext]",
             },
           },
         ],
