@@ -4,11 +4,9 @@
   box-sizing: border-box;
 }
 .color2 {
-  color: red;
-  display: flex;
-  box-sizing: content-box;
+  color: blue;
 }
 
-.font {
+.myFirstFont {
   font-family: myFirstFont;
 }

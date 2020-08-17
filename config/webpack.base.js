@@ -2,6 +2,8 @@ const pathsUtil = require("./pathsUtil");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const getCssModuleName = require("./getCssModuleName");
+const path = require("path");
+const glob = require("glob-all");
 
 module.exports = {
   //指定入口文件
@@ -46,7 +48,20 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-              plugins: [require("autoprefixer")],
+              plugins: [
+                require("autoprefixer"),
+                require("@fullhuman/postcss-purgecss")({
+                  content: [
+                    pathsUtil.appHtml,
+                    ...glob.sync(
+                      path.join(pathsUtil.appSrc, "/**/*.{js,jsx}"),
+                      {
+                        nodir: true,
+                      }
+                    ),
+                  ],
+                }),
+              ],
             },
           },
         ],
